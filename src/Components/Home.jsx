@@ -1,15 +1,20 @@
 import React from 'react'
 import SideNav from './Partials/SideNav.jsx'
-function Home() {
-    document.title = "Lumix | Home";
-  return (
-    < >
-         <SideNav />
-        <div className='w-[80%] h-full  '>
+import TopNav from './Partials/TopNav.jsx'
 
-        </div>
-    
-    </>
+function Home() {
+  document.title = "Lumix | Home";
+  return (
+    <div className="flex w-full min-h-screen">
+      {/* Sidebar */}
+      <SideNav />
+
+      {/* Main Content */}
+      <div className="flex-1 h-full overflow-x-hidden">
+        <TopNav />
+        {/* more content */}
+      </div>
+    </div>
   )
 }
 
